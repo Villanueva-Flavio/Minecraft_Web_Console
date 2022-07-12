@@ -1,0 +1,189 @@
+body {
+	min-height: 100%;
+	height: auto;
+	background-color: #131313;
+	font-family: 'Courier New', monospace;
+	font-weight: 500;
+	line-height:1.1;
+	font-size: 14px;
+	line-height: 18px;	
+}
+h4{
+	font-size: 18px;
+	line-height: 22px;
+	color: #353535;
+}
+#log {
+	position: relative;
+	margin-left: 16%; 
+    width: 80%;
+    padding-left: 0.5%;
+	top: -34px;
+    border-left: solid white 1px;
+    border-bottom: solid white 1px;
+    border-right: solid white 1px;
+    padding-top: 1.5%;
+}
+#scrollLock{
+    position: fixed;
+    margin-left: 10%;
+    z-index: 1;
+    overflow: visible;
+    top: 90%;
+    right: 88.25%;
+    left: -8%;
+}
+
+.disableScrollLock{
+	font-family: 'Courier New', monospace;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    background-color: #890202;
+    color: #fff;
+    width: 20vh;
+    height: 6vh;
+    transition: 0.3s ease-in-out;
+}
+
+.disableScrollLock:hover{
+    background-color: #a29e1f;
+    transition: 0.2s ease-in-out;
+}
+
+.enableScrollLock{
+    display: inline-block;
+    font-size: 15px;
+	font-family: 'Courier New', monospace;
+    text-align: center;
+    background-color: #0c049f;
+    color: #fff;
+    width: 20vh;
+    height: 6vh;
+    transition: 0.2s ease-in-out;
+}
+
+.enableScrollLock:hover{
+    background-color: #a29e1f;
+    transition: 0.3s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+ul{
+    position:fixed;
+    display: table-cell;
+    flex-direction: column;
+    width: 11%;
+    z-index: 1;
+}
+
+ul li{
+    list-style: none;
+    margin-right: auto;
+    margin-left: -5%;
+    margin-right: 10%;
+    
+}
+
+ul li::before{
+    
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 6em;
+    font-weight: 1000;
+    pointer-events: none;
+    opacity: 0;
+    letter-spacing: 20px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+ul li:hover::before{
+    opacity: 0.15;
+    letter-spacing: 0px;
+}
+
+ul li a{
+    position: relative;
+    display: inline-block;
+    padding: 6px 15px;
+    text-decoration: none;
+    background: #450289;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 80%;
+}
+
+ul:hover li a{
+    opacity: 0.05;
+}
+
+ul li a:hover{
+    transform: scale(1.4);
+    z-index: 1000;
+    background: #f95738;
+    opacity: 1;
+}
+
+ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+    transform: skewX(35deg);
+    transition: 0s;
+}
+
+ul li a:hover::before{
+    left: calc(100% + 100px);
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+
+
+
+input{
+    font-size: 22px;
+    color: #10fa10;
+    background: #131313;
+	font-family: Courier, "Lucida Console", monospace ;
+    padding-left:3%;
+    padding-top: 0.15%;
+    padding-bottom: 0.15%;
+    border: none;
+}
+
+input:focus-visible{
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    color: #10fa10;
+    opacity: 1;
+  }
+
+.floating-label{
+    color: #10fa10;
+    position: relative;
+    font-size: 3vh;
+    left: 2vh;
+    z-index: 1;
+    animation: loop_blink 1s infinite;
+    margin-left: 16%;
+}
+
+@keyframes loop_blink{
+    0% {opacity: 0}
+    49%{opacity: 0}
+    50% {opacity: 1}
+}

@@ -29,7 +29,7 @@ $(document).ready(function(){
     alertInfo("Console has cleared.");
   });
   
-  var autocompleteCommands = [
+  /* var autocompleteCommands = [
       "achievement give *",
       "achievement give * <player>",
       "achievement give <name>",
@@ -702,8 +702,8 @@ $(document).ready(function(){
           width: 43 + width + "px"
         });
     }
-  });
-});
+  });*/
+} );
 
 function logMsg(msg, sep, cls){
   var date = new Date(), 

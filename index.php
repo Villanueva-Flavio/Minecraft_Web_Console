@@ -19,7 +19,7 @@ if(isset($_GET['getLog'])){
 			echo "<p style='color: #ff4040;'>$string</p>";
         }else if (strpos($string, $index_debug[3]) == true){
 			echo "<p style='color: #ff0000;'>$string</p>";
-        }else{
+		}else{
 			echo "<p style='color: #ffffff;'>$string</p>";
         }
     }

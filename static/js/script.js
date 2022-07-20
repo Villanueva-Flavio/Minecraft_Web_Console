@@ -1,7 +1,13 @@
 $(document).ready(function(){
 
-  $("#txtCommand").bind("enterKey",function(e){
-    sendCommand($("#txtCommand").val());
+  $("#txtCommand").bind("enterKey",function(e){ // Funcion de escaneo y envio de comandos
+    if($("#txtCommand").val() == "stop"){
+      console.log("No estas autorizado a parar el servidor");
+    } else {
+      console.log("Enviaste el comando: ");
+      console.log($("#txtCommand").val());
+      sendCommand($("#txtCommand").val());
+    }
   });
 
   $("#txtCommand").keyup(function(e){

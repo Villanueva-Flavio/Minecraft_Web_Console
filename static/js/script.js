@@ -4,9 +4,11 @@ $(document).ready(function(){
     if($("#txtCommand").val() == "stop"){
       console.log("No estas autorizado a parar el servidor");
     } else {
-      console.log("Enviaste el comando: ");
-      console.log($("#txtCommand").val());
+      var command = "RCON envio el comando: " + $("#txtCommand").val();
+      console.log("Enviando comando: " + $("#txtCommand").val());
+      console.log(command);
       sendCommand($("#txtCommand").val());
+      
     }
   });
 

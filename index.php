@@ -4,22 +4,23 @@ $die = true;
 $logFile = "/home/pozzard/Servidores_Minecraft/MC_1.19-Paper/logs/latest.log";
 $interval = 100;
 $textColor = ""; //use CSS color
-$index_debug = ["/INFO", "/WARN", "/ERROR", "/FATAL", "Thread RCON Client", "[+]", "[-]", "at"];
+$index_debug = ["/INFO", "/WARN", "/ERROR", "/FATAL", "Thread RCON Client", "[+]", "[-]", "at", "Done"];
 // Thread RCON Client
 if(isset($_GET['getLog'])){
     $file = file($logFile);
     foreach ($file as $string) {
         if(strpos($string, $index_debug[4]) == true){$string = '';}
-		else if (strpos($string, $index_debug[5]) == true)  {echo "\n<p style=' display: inline-block;color: black; background-color: #10fa10 '>$string</p>\n";} // Join
-		else if (strpos($string, $index_debug[6]) == true)  {echo "\n<p style=' display: inline-block;color: black; background-color: #fa82c8'>$string</p>\n";} // Leave
-		else if (strpos($string, $index_debug[0]) == true)	{echo "<p style=' display: inline-block;color: #eae1f5;'>$string</p>";} // INFO
-		else if (strpos($string, $index_debug[1]) == true)	{echo "<p style=' display: inline-block;color: #ff7f00;'>$string</p>";} // WARNING (y)
-		else if (strpos($string, $index_debug[2]) == true)	{echo "<p style=' display: inline-block;color: #ff4040;'>$string</p>";} // ERROR (y)
-		else if (strpos($string, $index_debug[3]) == true)	{echo "<p style=' display: inline-block;color: #ff0000;'>$string</p>";} // FATAL (y)
-		else if (strpos($string, $index_debug[4]) == true)  {echo "<p style=' display: inline-block;color: #edc511;'>$string</p>";} // Thread RCON Client (y)
-		else if (strpos($string, $index_debug[7]) == true)  {echo "<p style=' display: inline-block;color: #ffffff;'>⠀⠀⠀⠀$string</p>";}
+		else if (strpos($string, $index_debug[8]) == true)  {echo "<p style='display: inline; color: black; font-size: 140%; background-color: lightblue;'>$string</p>\n";}
+		else if (strpos($string, $index_debug[5]) == true)  {echo "<p style='display: inline; color: black; font-size: 120%; background-color: #10fa10 '>$string</p>\n";} // Join
+		else if (strpos($string, $index_debug[6]) == true)  {echo "<p style='display: inline; color: black; font-size: 120%; background-color: #fa82c8'>$string</p>\n";} // Leave
+		else if (strpos($string, $index_debug[0]) == true)	{echo "<p style='display: inline; color: #eae1f5;'>$string</p>\n";} // INFO
+		else if (strpos($string, $index_debug[1]) == true)	{echo "<p style='display: inline; color: #ff7f00;'>$string</p>\n";} // WARNING (y)
+		else if (strpos($string, $index_debug[2]) == true)	{echo "<p style='display: inline; color: #ff4040;'>$string</p>\n";} // ERROR (y)
+		else if (strpos($string, $index_debug[3]) == true)	{echo "<p style='display: inline; color: #ff0000;'>$string</p>\n";} // FATAL (y)
+		else if (strpos($string, $index_debug[4]) == true)  {echo "<p style='display: inline; color: #edc511;'>$string</p>\n";} // Thread RCON Client (y)
+		else if (strpos($string, $index_debug[7]) == true)  {echo "<p style='display: inline; color: #ffffff;'>⠀⠀⠀⠀$string</p>\n";}
 		else{
-			echo "<p style=' display: inline-block;color: #ffffff;'>$string</p>";
+			echo "<p style=' display: inline;color: #ffffff;'>$string</p>\n";
         }
 	}
 }else{
